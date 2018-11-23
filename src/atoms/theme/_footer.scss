@@ -1,0 +1,30 @@
+.footer {
+    .content {
+        color: #ecf1f7;
+        background-color: transparent;
+        padding: 25px;
+    }
+    .contactMe {
+        .content {
+            min-height: 350px;
+            background-color: darkgray;
+        }
+        .contactForm {
+            background-color: rgb(255, 217, 62);
+            color: rgb(31, 30, 28);
+        }
+        .socialNetworks {
+            background-image: url('../../images/socialNetworks_background.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+    .bottom {
+        background-color: #f4f9ff;
+        .content {
+            min-height: 30px;
+            color: #313741;
+            padding: 5px 25px;
+        }
+    }
+}

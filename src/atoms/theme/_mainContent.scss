@@ -1,0 +1,32 @@
+.mainContent {
+    .content {
+        color: #313741;
+        min-height: 250px;
+        padding: 25px;
+    }
+    .aboutMe {
+        .content {
+            background-color: #f4f9ff;
+        }
+    }
+    .experience {
+        .content {
+            background-color: #ecf1f7;
+        }
+    }
+    .education {
+        .content {
+            background-color: #f4f9ff;
+        }
+    }
+    .skillsLanguages {
+        .content {
+            background-color: #ecf1f7;
+        }
+    }
+    .projects {
+        .content {
+            background-color: #f4f9ff;
+        }
+    }
+}

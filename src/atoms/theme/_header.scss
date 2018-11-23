@@ -1,0 +1,11 @@
+.header {
+    background-image: url('../../images/header_background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    .content {
+        color: #ecf1f7;
+        background-color: transparent;
+        min-height: 350px;
+        padding: 25px;
+    }
+}

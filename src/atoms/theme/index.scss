@@ -1,0 +1,53 @@
+// roboto font-face
+@import url('../../../node_modules/roboto-fontface/css/roboto/sass/roboto-fontface-regular.scss');
+
+// @import url('./_variables.scss');
+
+$mainFontFamily: "Roboto", "Arial";
+$bodyBackgroundColor: #0f1114;
+
+$primaryColor: #313741;
+$secondaryColor: rgb(255, 217, 62);
+$lightColor: #fff;
+
+$grayBackgroundColor: #f4f9ff;
+$lightGrayBackgroundColor: #ecf1f7;
+
+$blackTextColor: rgb(31, 30, 28);
+$grayTextColor: #1d2127;
+$lightGrayTextColor: rgb(119, 119, 119);
+
+$darkButtonColor: #4d4c49;
+$darkButtonColorHover: #605f5b;
+$lightButtonColor: $secondaryColor;
+
+$strongBoxShadow: 0 30px 120px 0 #dde5ee;
+$mediumBoxShadow: 0px 12px 90px -10px rgba(171, 191, 216, 0.6);
+
+@import url('./_header.scss');
+@import url('./_mainContent.scss');
+@import url('./_footer.scss');
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    font-family: $mainFontFamily;
+    background-color: $lightGrayBackgroundColor;
+    margin: 0;
+}
+
+.content {
+    border-radius: 0 !important;
+    border: none;
+    box-shadow: none !important;
+    background-color: $grayBackgroundColor;
+}
+
+.primaryButton {
+    color: $darkButtonColor;
+}
+.secondaryButton {
+    background-color: $lightButtonColor !important;
+}
