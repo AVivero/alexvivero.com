@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-material-starter",
-  "description": "Gatsby's material ui starter - Based in Gatsby's default starter",
+  "name": "alexvivero.com",
+  "description": "Alex Vivero's personal portfolio",
   "version": "0.0.1",
   "author": "Alex Vivero",
   "dependencies": {
@@ -23,6 +23,10 @@
     "roboto-fontface": "^0.10.0"
   },
   "keywords": [
+    "alexvivero",
+    "portfolio",
+    "react",
+    "materialUI",
     "gatsby"
   ],
   "license": "MIT",
@@ -46,6 +50,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AVivero/gatsby-material-starter"
+    "url": "https://github.com/AVivero/alexvivero.com"
   }
 }
