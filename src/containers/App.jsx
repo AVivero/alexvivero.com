@@ -4,8 +4,11 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 import ScrollUp from '../atoms/components/ScrollUp';
+import NavigationBar from '../atoms/components/NavigationBar';
 
 import '../atoms/theme/index.scss';
+
+import navigationItems from '../data/navigationItems.json';
 
 const styles = theme => ({
   mainContainer: {
@@ -110,6 +113,7 @@ class App extends React.Component {
           </Grid>
         </Grid>
         <ScrollUp show={showScrollUpButton} />
+        <NavigationBar items={navigationItems} />
       </div>
     );
   }

@@ -1,0 +1,30 @@
+[
+    {
+        "caption": "Home",
+        "active": true
+    },
+    {
+        "caption": "About Me",
+        "active": true
+    },
+    {
+        "caption": "Experience",
+        "active": true
+    },
+    {
+        "caption": "Education",
+        "active": true
+    },
+    {
+        "caption": "Skills",
+        "active": true
+    },
+    {
+        "caption": "Projects",
+        "active": true
+    },
+    {
+        "caption": "Contact Me",
+        "active": true
+    }
+]
