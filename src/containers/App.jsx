@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
-import ScrollUp from '../atoms/components/ScrollUp';
+import ScrollUpButton from '../atoms/components/ScrollUpButton';
 import NavigationBar from '../atoms/components/NavigationBar';
 
 import '../atoms/theme/index.scss';
@@ -25,33 +25,61 @@ class App extends React.Component {
     };
     this.classes = props.classes;
 
-    this.setScrollTopListener = this.setScrollTopListener.bind(this);
+    this.setScrollUpButtonEventListener = this.setScrollUpButtonEventListener.bind(this);
+    this.scrollUpButtonEventListenerHandler = this.scrollUpButtonEventListenerHandler.bind(this);
+    this.disableScrollUpButtonEventListener = this.disableScrollUpButtonEventListener.bind(this);
   }
 
   componentDidMount() {
-    this.setScrollTopListener();
+    this.setScrollUpButtonEventListener();
   }
 
-  setScrollTopListener() {
+  componentWillUnmount() {
+    this.disableScrollUpButtonEventListener();
+  }
+
+  /**
+   * @method
+   */
+  setScrollUpButtonEventListener() {
     if (!window) {
       return false;
     }
-    document.addEventListener('scroll', (event) => {
-      if (window.scrollY > 0) {
-        this.showScrollUpButton();
-      } else {
-        this.hideScrollUpButton();
-      }
-    });
+    document.addEventListener('scroll', this.scrollUpButtonEventListenerHandler);
     return true;
   }
 
+  /**
+   * @method
+   */
+  scrollUpButtonEventListenerHandler(event) {
+    if (window.scrollY > 0) {
+      this.showScrollUpButton();
+    } else {
+      this.hideScrollUpButton();
+    }
+  }
+
+  disableScrollUpButtonEventListener() {
+    if (!window) {
+      return false;
+    }
+    document.removeEventListener('scroll', this.scrollUpButtonEventListenerHandler);
+    return true;
+  }
+
+  /**
+   * @method
+   */
   showScrollUpButton() {
     this.setState({
       showScrollUpButton: true,
     });
   }
 
+  /**
+   * @method
+   */
   hideScrollUpButton() {
     this.setState({
       showScrollUpButton: false,
@@ -112,7 +140,7 @@ class App extends React.Component {
             </Grid>
           </Grid>
         </Grid>
-        <ScrollUp show={showScrollUpButton} />
+        <ScrollUpButton show={showScrollUpButton} />
         <NavigationBar items={navigationItems} />
       </div>
     );
