@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import Button from '@material-ui/core/Button';
-import Slide from '@material-ui/core/Slide';
+import SlideAnimation from '@material-ui/core/Slide';
 
 const scrollUp = (event) => {
   if (!window) {
@@ -30,13 +30,13 @@ const styles = theme => ({
 const ScrollUp = (props) => {
   const { classes, show } = props;
   return (
-    <Slide direction="up" in={show} mountOnEnter unmountOnExit>
-      <Tooltip title="Scroll Up" className={`${classes.scrollUp} secondaryButton`} onClick={scrollUp}>
+    <SlideAnimation direction="up" in={show} mountOnEnter unmountOnExit>
+      <Tooltip title="Scroll Up" className={`${classes.scrollUp} secondaryButton`} onClick={scrollUp} open={false}>
         <Button variant="fab" aria-label="Scroll Up">
           <ExpandLess />
         </Button>
       </Tooltip>
-    </Slide>
+    </SlideAnimation>
   );
 };
 
