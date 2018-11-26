@@ -7,7 +7,7 @@ import Icon from '@material-ui/core/Icon';
 import Grid from '@material-ui/core/Grid';
 import Tooltip from '@material-ui/core/Tooltip';
 import Zoom from '@material-ui/core/Zoom';
-import { isAbsolute } from 'path';
+import Slide from '@material-ui/core/Slide';
 
 const styles = theme => ({
   navigationButton: {
@@ -63,10 +63,6 @@ const styles = theme => ({
   },
 });
 
-const handleNavigation = (event) => {
-  console.log(event.target);
-};
-
 const renderNavigationItems = (items, classes) => {
   return items.map((item) => {
     return (
@@ -76,7 +72,7 @@ const renderNavigationItems = (items, classes) => {
             <Button
               className={`${classes.navigationButton}`}
               aria-label={item.caption}
-              onClick={handleNavigation}
+              href={`#${item.id}`}
             >
               <Icon
                 className={`${classes.navigationButtonIcon}`}
@@ -94,9 +90,11 @@ const renderNavigationItems = (items, classes) => {
 const NavigationBar = (props) => {
   const { classes, items } = props;
   return (
-    <Grid container direction="column" className={`${classes.navigationBar} navigation-bar`}>
-      {renderNavigationItems(items, classes)}
-    </Grid>
+    <Slide direction="right" in={true} mountOnEnter unmountOnExit timeout={500}>
+      <Grid container direction="column" className={`${classes.navigationBar} navigation-bar`}>
+        {renderNavigationItems(items, classes)}
+      </Grid>
+    </Slide>
   );
 };
 
