@@ -1,35 +1,42 @@
 [
     {
+        "id": "header",
         "caption": "Home",
         "active": true,
         "icon": "home"
     },
     {
+        "id": "aboutMe",
         "caption": "About Me",
         "active": false,
         "icon": "person"
     },
     {
+        "id": "experience",
         "caption": "Experience",
         "active": false,
         "icon": "business_center"
     },
     {
+        "id": "education",
         "caption": "Education",
         "active": false,
         "icon": "account_balance"
     },
     {
+        "id": "skills",
         "caption": "Skills",
         "active": false,
         "icon": "build"
     },
     {
+        "id": "projects",
         "caption": "Projects",
         "active": false,
         "icon": "web"
     },
     {
+        "id": "contactMe",
         "caption": "Contact Me",
         "active": false,
         "icon": "message"
